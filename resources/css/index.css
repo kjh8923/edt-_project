@@ -8,7 +8,7 @@
   padding: 0;
   margin: 0 auto;
   text-align: center;
-  /* align-items: center; */
+  align-items: center;
   list-style: none;
 }
 
@@ -31,7 +31,7 @@ header {
   flex-wrap: nowrap;
   position: fixed;
   top: 0;
-  background-color: rgb(26, 25, 25);
+  background-color: rgb(12, 12, 12);
   width: 100%;
   height: 3%;
   min-width: 1200px;
@@ -79,6 +79,12 @@ header > #search > input:focus {
   outline-style: none;
 }
 
+header > #search > input::placeholder {
+  color: rgba(223, 215, 215, 0.932);
+  font-style: italic;
+  font-weight: 100;
+}
+
 header > #search > img {
   margin-left: 0;
   cursor: pointer;
@@ -109,30 +115,64 @@ header > #menu > ul > li {
   border: 1px solid red;
   /* display: flex; */
   /* flex-wrap: nowrap; */
-  min-height: 500px;
   width: 100%;
   height: 15.625%;
+  min-height: 500px;
+  max-height: 625px;
 }
 
 .box:nth-of-type(1) {
-  margin-top: 5.3%;
+  margin-top: 5.1%;
 }
 
-.box > #img_slide {
+.box > #img_slide > .img_box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  max-height: 625px;
+  overflow: hidden;
+}
+
+.box > #img_slide > .img_box > img {
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-/* ------------------box_product------------------ */
+/* ------------------tabmenu------------------ */
 
 .tabmenu {
+  width: 100%;
+  height: 3%;
+  min-width: 1200px;
+  max-width: 2000px;
+  min-height: 100px;
   position: relative;
 }
+
 .tabmenu ul li {
   width: 25%; /* 각 메뉴 별 사이즈 */
   float: left; /* 메뉴 왼쪽 정렬 */
   text-align: center;
 }
+
+.tabmenu input {
+  display: none; /* radio 버튼 숨기기 */
+}
+
+.tabmenu input:checked ~ label {
+  /* checked 된 tabmenu만 적용 */
+  background: rgb(48, 48, 51);
+  color: white;
+}
+
+.tabmenu input:checked ~ .tabCon {
+  /* checked 된 tabCon만 적용 */
+  display: block;
+  background: rgb(48, 48, 51);
+}
+
 .tabmenu label {
   display: block;
   width: 100%;
@@ -141,38 +181,41 @@ header > #menu > ul > li {
   cursor: pointer;
   background: rgb(192, 191, 191);
 }
-.tabmenu input {
-  display: none;
-}
-.tabCon {
+
+.tabmenu .tabCon {
+  border: 2px solid blue;
   width: 100%;
   height: 460px;
+  min-width: 1200px;
+  max-width: 2000px;
   display: none;
   position: absolute;
   left: 0;
 }
 
-img {
-  width: 300px;
-  max-width: 100%;
+.tabmenu .tabCon img {
+  width: 15%;
   height: auto;
   margin: 50px;
 }
 
-.tabmenu input:checked ~ label {
-  background: rgb(48, 48, 51);
-  color: white;
-}
-.tabmenu input:checked ~ .tabCon {
-  display: block;
-  background: rgb(48, 48, 51);
-}
+/* ------------------tabmenu------------------ */
 
-/* ------------------box_product------------------ */
+.box > #product {
+  width: 100%;
+  height: 100%;
+}
 
 .box > #video_box {
   width: 100%;
   height: 100%;
+  padding: 0;
+}
+
+#video_box > iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
 }
 
 .box > #event {
