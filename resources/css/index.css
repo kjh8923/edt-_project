@@ -167,7 +167,7 @@ header > #menu > ul > li {
   color: white;
 }
 
-.tabmenu input:checked ~ .tabCon {
+input:checked ~ .tabCon {
   /* checked 된 tabCon만 적용 */
   display: block;
   background: rgb(48, 48, 51);
@@ -182,7 +182,7 @@ header > #menu > ul > li {
   background: rgb(192, 191, 191);
 }
 
-.tabmenu .tabCon {
+.tabCon {
   border: 2px solid blue;
   width: 100%;
   height: 460px;
@@ -218,9 +218,36 @@ header > #menu > ul > li {
   min-height: 500px;
 }
 
-.box > #event {
+.event {
   width: 100%;
-  height: 100%;
+  height: 3%;
+  min-width: 1200px;
+  max-width: 2000px;
+  min-height: 100px;
+  position: relative;
+}
+
+.event ul li {
+  width: 50%; /* 각 메뉴 별 사이즈 */
+  float: left; /* 메뉴 왼쪽 정렬 */
+  text-align: center;
+}
+.event input {
+  display: none; /* radio 버튼 숨기기 */
+}
+
+.event input:checked ~ label {
+  background: rgb(48, 48, 51);
+  color: white;
+}
+
+.event label {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  background: rgb(192, 191, 191);
 }
 
 .box > #img_box {
