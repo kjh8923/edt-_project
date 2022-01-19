@@ -347,16 +347,15 @@ input:checked ~ .tabCon {
 }
 /*================================= #img_box END =================================*/
 
-
 /*================================= footer START =================================*/
 footer {
     width: 100% ;
     height: 100% ;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     flex-wrap: nowrap;
     width: 100% ;
     height: 18.875% ;
-    min-height: 600px ;
+    
 }
 
 footer > .top{
@@ -365,10 +364,6 @@ footer > .top{
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
-}
-
-footer > .top > .footer_menu{
-    /* border: solid black 3px; */
 }
 
 footer > .top > .footer_menu > h1{
@@ -397,12 +392,21 @@ footer > .top > .footer_menu > ul > li > a{
 
 footer > .mid{
     width: 100%;
-    height: 33%;
-    background-color: gainsboro;
+    background-color: rgb(12, 12, 12);
+    padding: 20px;
+    border-top: 3px solid gray;
 }
+
+footer > .mid > .des > h1{
+    color: rgba(255, 255, 255, 0.897);
+    font-size: 16px;
+    margin: 3px 0 ;
+    font-weight: 400;
+}
+
 footer > .bottom{
-    width: 100%;
-    height: 33%;
-    background-color: gainsboro;
+    background-color: rgb(12, 12, 12);
+    border-top: 3px solid gray;
+
 }
 /*================================= footer END =================================*/
