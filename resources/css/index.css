@@ -197,7 +197,7 @@ header > #menu > ul > li > a {
 .box:nth-child(2) > .btn2 {
   display: inline-block;
   position: absolute;
-  top: 21%;
+  top: 17%;
   width: 22%;
   height: 8px;
   opacity: 0.6;
@@ -234,10 +234,11 @@ header > #menu > ul > li > a {
   min-width: 1200px;
   max-width: 2000px;
   min-height: 100px;
+  margin-top: 100px;
   /* position: relative; */
 }
 
-.tabmenu ul li {
+.tabmenu > ul > li {
   width: 25%; /* 각 메뉴 별 사이즈 */
   float: left; /* 메뉴 왼쪽 정렬 */
   text-align: center;
@@ -249,9 +250,10 @@ header > #menu > ul > li > a {
 
 .tabmenu input:checked ~ label {
   /* checked 된 tabmenu만 적용 */
-  background: white;
+  background: rgb(247, 247, 152);
   color: black;
-  border: black solid 2px;
+  /* border: black solid 2px; */
+  border-radius: 15px;
 }
 
 input:checked ~ .tabCon {
@@ -263,10 +265,11 @@ input:checked ~ .tabCon {
 .tabmenu label {
   display: block;
   width: 100%;
-  height: 40px;
-  line-height: 40px;
+  line-height: 250%;
   cursor: pointer;
-  background: #bebebe;
+  background: rgb(194, 229, 243);
+  /* border: black solid 1px; */
+  border-radius: 15px;
 }
 
 .tabCon {
@@ -276,29 +279,34 @@ input:checked ~ .tabCon {
   max-width: 2000px;
   display: none;
   position: absolute;
-  overflow: auto; /*  확대시 스크롤 나오게 */
+  /* border: solid black 3px; */
   left: 0;
 }
 
 .tabmenu .tabCon .productbox {
-  width: 2000px;
+  width: 100%;
   height: 420px;
   margin-top: 40px;
   position: absolute;
   display: flex;
+  /* border: solid black 3px; */
 }
 
 .tabmenu .tabCon .product {
-  width: 300px;
+  width: 22%;
   height: 450px;
   /* border: solid black 3px; */
 }
 
-.tabmenu .tabCon .product img {
-  width: 350px;
-  height: 350px;
+.tabmenu .tabCon .product a {
+  width: 100%;
+}
+
+.tabmenu .tabCon .product a img {
+  width: 100%;
+  height: 400px;
   /* border: 1px solid black; */
-  border-radius: 10px;
+  border-radius: 25px;
   /* background-color: #afd1d1; */
 }
 
@@ -340,6 +348,7 @@ input:checked ~ .tabCon {
   width: 100%;
   height: 100%;
   padding: 0;
+  margin-top: 300px;
 }
 
 #video_box > iframe {
@@ -353,97 +362,61 @@ input:checked ~ .tabCon {
 .box2 {
   width: 100%;
   height: 500px;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
-.box2 > .event {
+.box2 > .drawbox {
   width: 100%;
-  height: 3%;
-  min-width: 1200px;
-  max-width: 2000px;
-  min-height: 100px;
-  position: relative;
-}
-
-.box2 .event ul li {
-  width: 50%; /* 각 메뉴 별 사이즈 */
-  float: left; /* 메뉴 왼쪽 정렬 */
-  text-align: center;
-}
-
-.box2 .event input {
-  display: none; /* radio 버튼 숨기기 */
-}
-
-.box2 .event input:checked ~ label {
-  background: white;
-  color: black;
-  border: black solid 2px;
-}
-
-.box2 .event label {
-  display: block;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  cursor: pointer;
-  background: #bebebe;
-}
-
-.box2 > .event > .tabCon {
-  width: 100%;
-  min-width: 1200px;
-  max-width: 2000px;
-  display: none;
-  position: absolute;
-  overflow: auto; /*  확대시 스크롤 나오게 */
-  left: 0;
-}
-
-.box2 .event .tabCon .eventbox {
-  width: 2000px;
-  /* height: 600px; */
-  margin-top: 40px;
-  position: absolute;
+  height: 600px;
   display: flex;
+  margin-top: 300px;
 }
 
-.box2 .event .tabCon .draw {
-  width: 300px;
-  height: 450px;
-  /* border: solid black 3px; */
+.box2 > .drawbox > h3 {
+  display: flex;
+  writing-mode: vertical-rl;
+  font-size: 80px;
+  border-left: black solid 5px;
 }
 
-.box2 .event .tabCon .draw img {
-  width: 350px;
-  height: 350px;
+.box2 > .drawbox > .d_box {
+  width: 20%;
+  height: 600px;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.box2 > .drawbox > .d_box > a > img {
+  width: 100%;
+  height: 400px;
   /* border: 1px solid black; */
-  border-radius: 10px;
-  /* background-color: #afd1d1; */
+  border-radius: 25px;
 }
 
 /* -------- draw에 마우스 대면 text 나오게 하기 */
-.d_box {
-  position: relative;
-  transition: 0.5s ease;
+
+.box2 > .drawbox > .d_box > .draw_info {
+  margin-top: 30px;
 }
 
 .text {
   position: absolute;
   visibility: hidden;
-  top: 20%;
-  left: 43%;
+  top: 10%;
+  left: 40%;
   font-size: 20px;
   font-weight: 900;
 }
 
 .text2 {
-  width: 350px;
+  width: 100%;
   height: 100px;
   position: absolute;
   visibility: hidden;
-  top: 79%;
+  top: 73%;
   background-color: white;
-  padding: 30px 0 0 90px;
+  padding-left: 30%; /* comming soon 위치 조정 */
   font-size: 20px;
   font-weight: 900;
   /* border: black solid 1px; */
@@ -453,8 +426,8 @@ input:checked ~ .tabCon {
   color: red;
 }
 
-.d_box:hover {
-  opacity: 0.5;
+.box2 > .drawbox > .d_box:hover {
+  opacity: 0.8;
 }
 
 .d_box:hover .text {
@@ -467,45 +440,112 @@ input:checked ~ .tabCon {
 
 /* -------- draw에 마우스 대면 text 나오게 하기 */
 
-.box2 .event .tabCon .draw .draw_info {
+.box2 > .drawbox > .d_box > .draw_info {
   /* border: black 1px solid; */
   margin-top: 30px;
 }
 
-.box2 .event .tabCon .draw .draw_info p {
+.box2 > .drawbox > .d_box > .draw_info > p {
   text-align: left;
 }
 
-.box2 .event .tabCon .draw .draw_info .brand {
+.box2 > .drawbox > .d_box > .draw_info > .brand {
   font-size: 14px;
   margin-bottom: 2px;
   font-weight: 500;
 }
 
-.box2 .event .tabCon .draw .draw_info .ename {
+.box2 > .drawbox > .d_box > .draw_info > .ename {
   font-size: 13px;
   /* border: solid 1px black; */
 }
 
-.box2 .event .tabCon .draw .draw_info .kname {
+.box2 > .drawbox > .d_box > .draw_info > .kname {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.5);
 }
 
-.box2 .event .tabCon .draw .draw_info h3 {
+/*================================= #event END =================================*/
+.box2 > .salebox {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  margin-top: 200px;
+}
+
+.box2 > .salebox > h3 {
+  display: flex;
+  writing-mode: vertical-rl;
+  font-size: 80px;
+  border-right: black solid 5px;
+}
+
+.box2 > .salebox > .s_box {
+  width: 20%;
+  height: 600px;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.box2 > .salebox > .s_box > a > img {
+  width: 100%;
+  height: 400px;
+  /* border: 1px solid black; */
+  border-radius: 25px;
+}
+
+.box2 > .salebox > .s_box > .sale_info {
+  /* border: black 1px solid; */
+  margin-top: 30px;
+}
+
+.box2 > .salebox > .s_box > .sale_info > p {
   text-align: left;
 }
 
-.box2 .event .tabCon .draw .draw_info h3 a {
+.box2 > .salebox > .s_box > .sale_info > .brand {
   font-size: 14px;
+  margin-bottom: 2px;
+  font-weight: 500;
 }
-/*================================= #event END =================================*/
+
+.box2 > .salebox > .s_box > .sale_info > .ename {
+  font-size: 13px;
+  /* border: solid 1px black; */
+}
+
+.box2 > .salebox > .s_box > .sale_info > .kname {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.box2 > .salebox > .s_box > .sale_info > .bef_price {
+  text-align: left;
+  font-size: 20px;
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.box2 > .salebox > .s_box > .sale_info > .aft_price {
+  text-align: right;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(228, 150, 5);
+  margin-top: 10px;
+}
+
+.box2 > .salebox > .s_box > .sale_info > .aft_price > span {
+  color: red;
+  padding-left: 50px;
+  font-size: 30px;
+}
 
 /*================================= #img_box START =================================*/
 .box > #img_box {
   border: 1px solid red;
   width: 100%;
   height: 100%;
+  margin-top: 300px;
 }
 /*================================= #img_box END =================================*/
 
@@ -517,6 +557,7 @@ footer {
   flex-wrap: nowrap;
   width: 100%;
   height: 18.875%;
+  margin-top: 600px;
 }
 
 footer > .top {
