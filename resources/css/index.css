@@ -22,7 +22,6 @@ body {
   min-width: 1200px;
   max-width: 2000px;
   min-height: 3200px;
-  max-height: 4000px;
   width: 100%;
   height: 100%;
 }
@@ -140,14 +139,18 @@ header > #menu > ul > li > a {
   flex-wrap: nowrap;
   width: 100%;
   height: 500px;
+  margin-top: 100px;
 }
-/*================================= .box SETTING =================================*/
 
-/*================================= img_slide START =================================*/
 .box:nth-of-type(1) {
   margin-top: 100px;
   height: 625px;
 }
+
+/*================================= .box SETTING =================================*/
+
+/*================================= img_slide START =================================*/
+
 
 /*------ slide_container ------*/
 .box > #container {
@@ -177,7 +180,7 @@ header > #menu > ul > li > a {
 /*------ slideButton ------*/
 .box:nth-child(2) > span {
   position: absolute;
-  top: 9.5%;
+  top: 8%;
   margin: 0 1.5%;
   color: white;
   font-size: 7em;
@@ -197,8 +200,8 @@ header > #menu > ul > li > a {
 .box:nth-child(2) > .btn2 {
   display: inline-block;
   position: absolute;
-  top: 17%;
-  width: 22%;
+  top: 3%;
+  width: 1.5%;
   height: 8px;
   opacity: 0.6;
   transition: transform 300;
@@ -206,19 +209,19 @@ header > #menu > ul > li > a {
 }
 
 .box:nth-child(2) > button:nth-of-type(1) {
-  left: 3%;
+  left: 90%;
 }
 
 .box:nth-child(2) > button:nth-of-type(2) {
-  left: 27%;
+  left: 92%;
 }
 
 .box:nth-child(2) > button:nth-of-type(3) {
-  left: 51%;
+  left: 94%;
 }
 
 .box:nth-child(2) > button:nth-of-type(4) {
-  left: 75%;
+  left: 96%;
 }
 
 .box:nth-child(2) > button:hover {
@@ -234,7 +237,6 @@ header > #menu > ul > li > a {
   min-width: 1200px;
   max-width: 2000px;
   min-height: 100px;
-  margin-top: 100px;
   /* position: relative; */
 }
 
@@ -250,10 +252,10 @@ header > #menu > ul > li > a {
 
 .tabmenu input:checked ~ label {
   /* checked 된 tabmenu만 적용 */
-  background: rgb(247, 247, 152);
   color: black;
-  /* border: black solid 2px; */
-  border-radius: 15px;
+  border-bottom: black solid 1px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 input:checked ~ .tabCon {
@@ -267,9 +269,9 @@ input:checked ~ .tabCon {
   width: 100%;
   line-height: 250%;
   cursor: pointer;
-  background: rgb(194, 229, 243);
-  /* border: black solid 1px; */
-  border-radius: 15px;
+  border-top: black solid 1px;
+  color: rgb(151, 150, 150);
+  font-weight: bold;
 }
 
 .tabCon {
@@ -309,11 +311,11 @@ input:checked ~ .tabCon {
   border-radius: 25px;
   /* background-color: #afd1d1; */
 }
-
+/*
 .tabmenu .tabCon .product .product_info {
-  /* border: black 1px solid; */
+  border: black 1px solid; 
 }
-
+*/
 .tabmenu .tabCon .product .product_info p {
   text-align: left;
 }
@@ -341,14 +343,13 @@ input:checked ~ .tabCon {
 .tabmenu .tabCon .product .product_info h3 a {
   font-size: 14px;
 }
-/*================================= .tabmenu END =================================*/
+/*================================= #event END =================================*/
 
-/*================================= .video_box START =================================*/
+/*================================= #img_box START =================================*/
 .box > #video_box {
   width: 100%;
   height: 100%;
   padding: 0;
-  margin-top: 300px;
 }
 
 #video_box > iframe {
@@ -356,21 +357,20 @@ input:checked ~ .tabCon {
   height: 100%;
   min-height: 500px;
 }
-/*================================= .video_box END =================================*/
+/*================================= #img_box END =================================*/
 
-/*================================= #event STRAT =================================*/
+/*================================= draw START =================================*/
 .box2 {
   width: 100%;
   height: 500px;
   margin-top: 150px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .box2 > .drawbox {
   width: 100%;
   height: 600px;
   display: flex;
-  margin-top: 300px;
 }
 
 .box2 > .drawbox > h3 {
@@ -394,22 +394,58 @@ input:checked ~ .tabCon {
   border-radius: 25px;
 }
 
+/* -------- draw에 마우스 대면 D-Day 나오게 하기 */
+
+.timer {
+  position: absolute;
+  visibility: hidden;
+  top: 55%;
+  left: 28%;
+  font-size: 20px;
+}
+
+.timer h3{
+  color: rgb(134, 134, 243);
+}
+
+.d_box:hover .timer {
+  visibility: visible;
+}
+
+/* -------- draw에 마우스 대면 D-Day 나오게 하기 END*/
+
 /* -------- draw에 마우스 대면 text 나오게 하기 */
+
+.box2 > .drawbox > .d_box:hover {
+  opacity: 0.7;
+}
 
 .box2 > .drawbox > .d_box > .draw_info {
   margin-top: 30px;
 }
 
-.text {
+.d_box:hover .text {
+  visibility: visible;
+}
+
+.text { /* D-day 날짜 */
   position: absolute;
   visibility: hidden;
   top: 10%;
-  left: 40%;
+  left: 38%;
   font-size: 20px;
   font-weight: 900;
 }
 
-.text2 {
+.text span { /* D-day 시간 */
+  color: red;
+}
+
+.d_box:hover .text2 {
+  visibility: visible;
+}
+
+.text2 { /* coming soon */
   width: 100%;
   height: 100px;
   position: absolute;
@@ -419,31 +455,9 @@ input:checked ~ .tabCon {
   padding-left: 30%; /* comming soon 위치 조정 */
   font-size: 20px;
   font-weight: 900;
-  /* border: black solid 1px; */
 }
 
-.text span {
-  color: red;
-}
-
-.box2 > .drawbox > .d_box:hover {
-  opacity: 0.8;
-}
-
-.d_box:hover .text {
-  visibility: visible;
-}
-
-.d_box:hover .text2 {
-  visibility: visible;
-}
-
-/* -------- draw에 마우스 대면 text 나오게 하기 */
-
-.box2 > .drawbox > .d_box > .draw_info {
-  /* border: black 1px solid; */
-  margin-top: 30px;
-}
+/* -------- draw에 마우스 대면 text 나오게 하기 END*/
 
 .box2 > .drawbox > .d_box > .draw_info > p {
   text-align: left;
@@ -457,7 +471,6 @@ input:checked ~ .tabCon {
 
 .box2 > .drawbox > .d_box > .draw_info > .ename {
   font-size: 13px;
-  /* border: solid 1px black; */
 }
 
 .box2 > .drawbox > .d_box > .draw_info > .kname {
@@ -465,19 +478,13 @@ input:checked ~ .tabCon {
   color: rgba(0, 0, 0, 0.5);
 }
 
-/*================================= #event END =================================*/
+/*================================= draw END =================================*/
+
+/* =============================== slae START ====================================== */
 .box2 > .salebox {
   width: 100%;
   height: 600px;
   display: flex;
-  margin-top: 200px;
-}
-
-.box2 > .salebox > h3 {
-  display: flex;
-  writing-mode: vertical-rl;
-  font-size: 80px;
-  border-right: black solid 5px;
 }
 
 .box2 > .salebox > .s_box {
@@ -503,13 +510,17 @@ input:checked ~ .tabCon {
   text-align: left;
 }
 
-.box2 > .salebox > .s_box > .sale_info > .brand {
+.box2 > .salebox > .s_box > .sale_info > a> p {
+  text-align: left;
+}
+
+.box2 > .salebox > .s_box > .sale_info > a> .brand {
   font-size: 14px;
   margin-bottom: 2px;
   font-weight: 500;
 }
 
-.box2 > .salebox > .s_box > .sale_info > .ename {
+.box2 > .salebox > .s_box > .sale_info > a>.ename {
   font-size: 13px;
   /* border: solid 1px black; */
 }
@@ -526,8 +537,11 @@ input:checked ~ .tabCon {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.box2 > .salebox > .s_box > .sale_info > .aft_price {
+.box2 > .salebox > .s_box > .sale_info > .aft_price{
   text-align: right;
+}
+
+.box2 > .salebox > .s_box > .sale_info > .aft_price> a {
   font-size: 25px;
   font-weight: bold;
   color: rgb(228, 150, 5);
@@ -540,14 +554,26 @@ input:checked ~ .tabCon {
   font-size: 30px;
 }
 
-/*================================= #img_box START =================================*/
+.box2 > .salebox > h3 {
+  display: flex;
+  writing-mode: vertical-rl;
+  font-size: 80px;
+  border-right: black solid 5px;
+}
+
+/* =============================== slae END ====================================== */
+
+/*================================= box > img_box START =================================*/
 .box > #img_box {
-  border: 1px solid red;
   width: 100%;
   height: 100%;
-  margin-top: 300px;
 }
-/*================================= #img_box END =================================*/
+
+.box > #img_box > a > img{
+  width: 100%;
+  height: 100%;
+}
+/*================================= box > img_box END =================================*/
 
 /*================================= footer START =================================*/
 footer {
@@ -557,7 +583,6 @@ footer {
   flex-wrap: nowrap;
   width: 100%;
   height: 18.875%;
-  margin-top: 600px;
 }
 
 footer > .top {
